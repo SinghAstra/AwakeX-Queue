@@ -7,7 +7,7 @@ const PORT = 5000;
 
 app.use(express.json());
 
-app.get("/api/wake-up", addJobToWakeUpQueue);
+app.post("/api/wake-up", addJobToWakeUpQueue);
 
 app.get("/", (req: Request, res: Response) => {
   console.log("Request made to / endpoint");

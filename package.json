@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "bullmq": "^5.53.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "ioredis": "^5.6.0"
+  },
+  "name": "awakex-queue",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "dev:worker1": "node dist/workers/wake-up.js --id=1",
+    "dev:server": "node dist/index.js",
+    "dev": "concurrently \"npm run watch\" \"npm run dev:server\" \"npm run dev:worker1\" "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "concurrently": "^9.1.2",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}
